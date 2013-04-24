@@ -1,7 +1,7 @@
 define(['backbone', 'views/team'], function(Backbone, Team) {
 	var TeamsView = Backbone.View.extend({
 		className: 'teams',
-		header: _.template( 'headerTemplate' ),
+		header: _.template( headerTemplate ),
 
 		initialize : function() {
 			console.log( this.collection );
@@ -11,7 +11,7 @@ define(['backbone', 'views/team'], function(Backbone, Team) {
 		render: function() {
 			this.$el.html( this.header() );
 			this.collection.each(function(team) {
-				var teamView = new App.Views.Team({ model: team });
+				var teamView = new Team({ model: team });
 				this.$el.append(teamView.render().el);
 			}, this);
 

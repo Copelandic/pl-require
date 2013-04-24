@@ -16,6 +16,7 @@ require.config({
 require(['models/team', 'views/team', 'views/teams', 'collections/teams'], function(TeamModel, TeamView, TeamsView, teamCollection) {
   var team = new TeamModel;
   var teamView = new TeamView({ model: team });
-  var teamsView = new TeamsView({ collection: teamCollection });
+  var teamData = new teamCollection( window.teams );
+  var teamsView = new TeamsView({ collection: teamData });
   $('body').append(teamsView.render().el);
 });
