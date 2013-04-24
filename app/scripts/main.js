@@ -13,7 +13,7 @@ require.config({
   }
 });
 
-require(['models/team', 'views/team', 'views/teams'], function(TeamModel, TeamView, TeamsView) {
+require(['models/team', 'views/team', 'views/teams', 'collections/teams'], function(TeamModel, TeamView, TeamsView, teamCollection) {
   var team = new TeamModel;
   var teamView = new TeamView({ model: team });
   var teamsView = new TeamsView({ collection: teamCollection });

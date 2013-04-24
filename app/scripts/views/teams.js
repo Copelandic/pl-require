@@ -4,6 +4,7 @@ define(['backbone', 'views/team'], function(Backbone, Team) {
 		header: _.template( 'headerTemplate' ),
 
 		initialize : function() {
+			console.log( this.collection );
 			this.listenTo( this.collection, 'sort', this.render );
 		},
 
