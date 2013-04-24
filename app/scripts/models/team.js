@@ -1,0 +1,37 @@
+define(['backbone'], function(Backbone) {
+	var Team = Backbone.Model.extend({
+		defaults: {
+			name: 'Team Name',
+			won: 0,
+			drawn: 0,
+			lost: 0,
+			goalsFor: 0,
+			goalsAgainst: 0
+		},
+
+		initialize: function() {
+			this.set('points', this.points() );
+			this.set('goalDifference', this.goalDifference() );
+			this.set('played', this.played() );
+		},
+
+		name: function() {
+			return this.get('name');
+		},
+
+		played: function() {
+			return ( Number(this.get('won') + this.get('drawn') + this.get('lost')));
+		},
+
+		points: function() {
+			return ( Number(this.get('won') * 3) + this.get('drawn'));
+		},
+
+		goalDifference: function() {
+			return ( Number(this.get('goalsFor') ) - this.get('goalsAgainst'));
+		}
+	});
+	return Team;
+});
+
+//this.points = (this.gamesWon * 3) + this.gamesDrawn
