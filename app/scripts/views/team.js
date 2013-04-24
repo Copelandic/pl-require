@@ -1,8 +1,8 @@
-define(['backbone', 'helpers'], function(Backbone, Helpers) {
+define(['backbone', 'helpers', 'text'], function(Backbone, Helpers, Text) {
 	var Team = Backbone.View.extend({
 		tagName: 'ul',
 		className: 'team-row',
-		template: template('teamTemplate'),
+		template: _.template( 'teamTemplate' ),
 
 		initialize : function() {
 			this.listenTo( this.collection, 'sort', this.render );
@@ -13,4 +13,6 @@ define(['backbone', 'helpers'], function(Backbone, Helpers) {
 			return this;
 		}
 	});
+
+	return Team;
 });

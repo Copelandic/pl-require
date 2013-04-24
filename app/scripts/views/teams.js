@@ -1,7 +1,7 @@
 define(['backbone', 'views/team'], function(Backbone, Team) {
 	var TeamsView = Backbone.View.extend({
 		className: 'teams',
-		header: template('headerTemplate'),
+		header: _.template( 'headerTemplate' ),
 
 		initialize : function() {
 			this.listenTo( this.collection, 'sort', this.render );
