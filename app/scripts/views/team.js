@@ -1,4 +1,4 @@
-define(['backbone', 'helpers', 'text!views/html/header-template.html'], function(Backbone, Helpers, Text) {
+define(['backbone', 'helpers', 'text!views/html/team-template.html'], function(Backbone, Helpers, teamTemplate) {
 	var Team = Backbone.View.extend({
 		tagName: 'ul',
 		className: 'team-row',

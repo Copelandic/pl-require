@@ -1,4 +1,4 @@
-define(['backbone', 'views/team'], function(Backbone, Team) {
+define(['backbone', 'views/team', 'text!views/html/header-template.html'], function(Backbone, Team, headerTemplate) {
 	var TeamsView = Backbone.View.extend({
 		className: 'teams',
 		header: _.template( headerTemplate ),
