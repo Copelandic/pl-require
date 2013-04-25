@@ -6,7 +6,7 @@ define([
 ]);
 
 function(Backbone, TeamsView, TeamsCollection, MainRouter) {
-	var AppView = Backbone.View.extend({
+	return Backbone.View.extend({
 		el: 'body',
 
 		initialize: function() {
@@ -18,6 +18,4 @@ function(Backbone, TeamsView, TeamsCollection, MainRouter) {
 			Backbone.history.start();
 		}
 	});
-
-	return AppView;
 });

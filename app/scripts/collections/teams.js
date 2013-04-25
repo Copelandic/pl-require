@@ -1,5 +1,5 @@
 define(['backbone', 'models/team'], function(Backbone, TeamModel) {
-	var Teams = Backbone.Collection.extend({
+	return Backbone.Collection.extend({
 		model: TeamModel,
 
 		initialize : function(){
@@ -15,6 +15,4 @@ define(['backbone', 'models/team'], function(Backbone, TeamModel) {
 			this.sort();
 		}
 	});
-
-	return Teams;
 });

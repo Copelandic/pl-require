@@ -1,5 +1,5 @@
 define(['backbone'], function(Backbone) {
-	var Team = Backbone.Model.extend({
+	return Backbone.Model.extend({
 		defaults: {
 			name: 'Team Name',
 			won: 0,
@@ -31,7 +31,6 @@ define(['backbone'], function(Backbone) {
 			return ( Number(this.get('goalsFor') ) - this.get('goalsAgainst'));
 		}
 	});
-	return Team;
 });
 
 //this.points = (this.gamesWon * 3) + this.gamesDrawn
